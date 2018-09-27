@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tour Agency</title>
+
+	<link rel="stylesheet" type="text/css" href="Content//bootstrap.min.css">
+	<link rel='stylesheet prefetch' href='Content/spectre.min.css'>
+	<link rel="stylesheet" href="Content/font-awesome.min.css">
+	<link href="~/Content/styles.css" rel="stylesheet" />
+	@*@Scripts.Render("~/bundles/modernizr")*@
+	<script src="~/Scripts/vue.js"></script>
+	<script src="~/Scripts/vuejs-datepicker.min.js"></script>
+	<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+	<script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<body>
+	<div class="wrapper">
+		<div id="app">
+				<component v-bind:is="currentTabComponent"
+						   class="app"
+						   @@settab="setTab($event.tab)"
+						   @@showmodal="showWindow($event)"
+						   @@login="login($event)"
+						   @@logout="logout"></component>
+				<app-modal v-if="showModalFlag" :modal="modal" @@close="showModalFlag = false">
+		</div>
+	</div>
+	@RenderBody()
+	@*<div class="container body-content">
+			@RenderBody()
+			<hr />
+			<footer>
+				<p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
+			</footer>
+		</div>*@
+	<script src="~/Scripts/jana.js"></script>
+	<script type="text/x-template" id="modal-template">
+		<transition name="modal">
+			<div class="modal-mask">
+				<div class="modal-wrapper">
+					<div class="modal-container">
+
+						<div class="modal-header">
+							<slot name="header">
+								<h3>{{modal.head}}</h3>
+							</slot>
+						</div>
+
+						<div class="modal-body">
+							<slot name="body">
+								<app-tour-info v-if="modal.obj" :item="modal.obj.value" :head="modal.obj.head"></app-tour-info>
+								<span v-else>{{modal.message}}</span>
+							</slot>
+						</div>
+
+						<div class="modal-footer">
+							<slot name="footer">
+								<button class="modal-default-button btn-info" @@click="$emit('close')">
+									OK
+								</button>
+							</slot>
+						</div>
+					</div>
+				</div>
+			</div>
+		</transition>
+	</script>
+	@*@Scripts.Render("~/bundles/jquery")
+		@Scripts.Render("~/bundles/bootstrap")*@
+</body>
+</html>

@@ -1,0 +1,16 @@
+E:\VSworkspace\Yana\TourModels\bin\Release\TourModels.dll.config
+E:\VSworkspace\Yana\TourModels\bin\Release\TourModels.dll
+E:\VSworkspace\Yana\TourModels\bin\Release\TourModels.pdb
+E:\VSworkspace\Yana\TourModels\bin\Release\EntityFramework.dll
+E:\VSworkspace\Yana\TourModels\bin\Release\EntityFramework.SqlServer.dll
+E:\VSworkspace\Yana\TourModels\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\VSworkspace\Yana\TourModels\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\VSworkspace\Yana\TourModels\bin\Release\EntityFramework.xml
+E:\VSworkspace\Yana\TourModels\bin\Release\EntityFramework.SqlServer.xml
+E:\VSworkspace\Yana\TourModels\bin\Release\Microsoft.AspNet.Identity.Core.xml
+E:\VSworkspace\Yana\TourModels\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VSworkspace\Yana\TourModels\obj\Release\TourModels.csprojResolveAssemblyReference.cache
+E:\VSworkspace\Yana\TourModels\obj\Release\TourModels.csproj.CoreCompileInputs.cache
+E:\VSworkspace\Yana\TourModels\obj\Release\TourModels.csproj.CopyComplete
+E:\VSworkspace\Yana\TourModels\obj\Release\TourModels.dll
+E:\VSworkspace\Yana\TourModels\obj\Release\TourModels.pdb
